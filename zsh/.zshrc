@@ -82,7 +82,14 @@ plugins=(
 	sudo
 	extract
 	zsh-autosuggestions
-    	zsh-syntax-highlighting
+  zsh-syntax-highlighting
+  copypath
+  copyfile
+  colored-man-pages
+  sudo
+  dirhistory
+  command-not-found
+  zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -121,6 +128,7 @@ alias c="clear"
 alias copy="wl-copy"
 alias sl="ls"
 alias py="python3"
+alias search="paru -Ss"
 
 # EZA Aliases
 alias ls='eza --color=always --icons=always --group-directories-first'
@@ -131,11 +139,21 @@ alias lt='eza --tree --level=2 --color=always --icons=always --group-directories
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # fnm for js
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 
+
+eval "$(zoxide init zsh --cmd cd)"
+
 #laravel
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
