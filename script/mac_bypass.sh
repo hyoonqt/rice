@@ -1,7 +1,7 @@
 #!/bin/bash
 
-WIFI_NAME="FOR EMPLOYE"
-HP_MAC="90:d4:73:ee:2f:6c"
+WIFI_NAME="[change with wifi's name]"
+HP_MAC="[change with mobile's MAC addr]"
 
 echo "[*] Memutus koneksi saat ini..."
 nmcli connection down "$WIFI_NAME" 2>/dev/null
